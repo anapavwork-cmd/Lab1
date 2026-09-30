@@ -127,12 +127,13 @@ AA --> AB([Конец])
 ### 5. Программа
 
 ```java
+import java.io.PrintStream;
 import java.util.Scanner;
 
 public class Main {
+    public static PrintStream out = System.out;
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in); //создаю сканер а
-
         long X = a.nextLong(); //грузоподъемность
         long A = a.nextLong(); //первый груз
         long B = a.nextLong(); //второй груз
@@ -142,50 +143,50 @@ public class Main {
 
         //только A
         if (A <= X) {
-            System.out.println("Можно загрузить - A");
+            out.println("Можно загрузить - A");
             max = 1;
         }
 
         //только B
         if (B <= X) {
-            System.out.println("Можно загрузить - B");
+            out.println("Можно загрузить - B");
             max = 1;
         }
 
         //только C
         if (C <= X) {
-            System.out.println("Можно загрузить - C");
+            out.println("Можно загрузить - C");
             max = 1;
         }
 
         // A + B
         if (A + B <= X) {
-            System.out.println("Можно загрузить - A и B");
+            out.println("Можно загрузить - A и B");
             max = 2;
         }
 
         // A + C
         if (A + C <= X) {
-            System.out.println("Можно загрузить - A и C");
+            out.println("Можно загрузить - A и C");
             max = 2;
         }
 
         // B + C
         if (B + C <= X) {
-            System.out.println("Можно загрузить - B и C");
+            out.println("Можно загрузить - B и C");
             max = 2;
         }
 
         // A + B + C
         if (A + B + C <= X) {
-            System.out.println("Можно загрузить - A, B и C");
+            out.println("Можно загрузить - A, B и C");
             max = 3;
         }
         if (max == 0) {
-            System.out.println("Ни один груз нельзя загрузить в лифт");
+            out.println("Ни один груз нельзя загрузить в лифт");
         }
 
-        System.out.println("Максимальное количество грузов - " + max);
+        out.println("Максимальное количество грузов - " + max);
     }
 }
 ```
