@@ -5,19 +5,19 @@ public class Main {
     public static PrintStream out = System.out;
     public static void main(String[] args) {
         Scanner a = new Scanner(System.in); //создаю сканер а
+        
         long X = a.nextLong(); //грузоподъемность
         long A = a.nextLong(); //первый груз
         long B = a.nextLong(); //второй груз
         long C = a.nextLong(); //третий груз
-
         int max = 0; //переменная для суммы грузов. вне фигурных скобок каждой проверки, чтобы не уничтожалась каждый раз.
-
         //только A
+        
         if (A <= X) {
             out.println("Можно загрузить - A");
             max = 1;
         }
-
+        
         //только B
         if (B <= X) {
             out.println("Можно загрузить - B");
