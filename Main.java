@@ -1,4 +1,3 @@
-```java
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -61,4 +60,3 @@ public class Main {
         out.println("Максимальное количество грузов - " + max);
     }
 }
-```
